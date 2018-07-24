@@ -1,7 +1,7 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
 import * as Lambda from 'aws-lambda';
 import * as Util from 'util';
-import { ClovaExtensionHandle } from './extension/clvoa-extension-handle';
+import { ClovaExtensionLambda } from './extension/clova-extension-lambda';
 import { LoggerFactory } from './helpers/logger-factory';
 
 /**
@@ -17,10 +17,9 @@ export const handler = async (
 ) => {
   // トレースログ
   LoggerFactory.instance.trace(`event: ${Util.inspect(event, { depth: null })}`);
-  LoggerFactory.instance.trace(`context: ${Util.inspect(context, { depth: null })}`);
 
   // ハンドラ作成(Lambda用)
-  const extensionHandler = new ClovaExtensionHandle();
+  const extensionHandler = new ClovaExtensionLambda();
 
   // レスポンス本文
   let responseBody: Clova.Clova.ResponseBody | null = null;

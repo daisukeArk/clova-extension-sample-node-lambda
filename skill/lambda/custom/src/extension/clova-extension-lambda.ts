@@ -1,7 +1,7 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
 import * as Handlers from '../handlers';
 
-export class ClovaExtensionHandle {
+export class ClovaExtensionLambda {
   /**
    * AWS Lambda 呼出
    * @param body リクエスト本文
