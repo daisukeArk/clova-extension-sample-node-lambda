@@ -1,7 +1,7 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
 import * as Lambda from 'aws-lambda';
 import * as Util from 'util';
-import { ClovaExtensionHandle } from './helpers/clvoa-extension-handle';
+import { ClovaExtensionHandle } from './extension/clvoa-extension-handle';
 import { LoggerFactory } from './helpers/logger-factory';
 
 /**

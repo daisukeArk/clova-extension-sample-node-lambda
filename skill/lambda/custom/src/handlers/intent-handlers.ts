@@ -1,9 +1,9 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
+import { ClovaExtensionClient } from '../extension/clova-extension-client';
 import * as Handlers from '../handlers';
-import { ClovaSkill } from '../helpers/clova-skill';
 
 export const intentHandlers = async (responseHelper: Clova.Context) => {
-  const clova = new ClovaSkill()
+  const clova = new ClovaExtensionClient()
     .addRequestHandlers(
       Handlers.GuideIntentHandler,
       Handlers.HelloWorldIntentHandler,

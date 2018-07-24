@@ -1,6 +1,6 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
+import { RequestHandler } from '../extension/clova-extension-client';
 import { createUtterance } from '../factories/utterance-factory';
-import { RequestHandler } from '../helpers/clova-skill';
 import { LaunchRequestUtterance as Utterance } from '../utterances/launch-request-utterance';
 
 /**

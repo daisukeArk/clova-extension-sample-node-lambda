@@ -1,5 +1,5 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
-import { RequestHandler } from '../helpers/clova-skill';
+import { RequestHandler } from '../extension/clova-extension-client';
 
 /**
  * セッション終了リクエストハンドラ

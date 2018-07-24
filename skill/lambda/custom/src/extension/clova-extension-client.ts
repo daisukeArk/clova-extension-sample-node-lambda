@@ -1,9 +1,9 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
 
 /**
- * Clova Extension ヘルパー
+ * Clova Extension Client
  */
-export class ClovaSkill {
+export class ClovaExtensionClient {
   /**
    * インテントハンドラ
    */
@@ -66,7 +66,7 @@ export class ClovaSkill {
    * インテントハンドラ追加
    * @param requestHandlers インテントハンドラ
    */
-  public addRequestHandlers(...handlers: RequestHandler[]): ClovaSkill {
+  public addRequestHandlers(...handlers: RequestHandler[]): this {
     for (const handler of handlers) {
       this.handlers.push(handler);
     }
@@ -77,7 +77,7 @@ export class ClovaSkill {
    * エラーハンドラ追加
    * @param errorHandlers エラーハンドラ
    */
-  public addErrorHandlers(...handlers: IErrorHandler[]): ClovaSkill {
+  public addErrorHandlers(...handlers: IErrorHandler[]): this {
     for (const handler of handlers) {
       this.errorHandlers.push(handler);
     }

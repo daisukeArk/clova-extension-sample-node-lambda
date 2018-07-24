@@ -1,7 +1,7 @@
 import * as Clova from '@line/clova-cek-sdk-nodejs';
 import * as Util from 'util';
+import { IErrorHandler } from '../extension/clova-extension-client';
 import { createUtterance } from '../factories/utterance-factory';
-import { IErrorHandler } from '../helpers/clova-skill';
 import { LoggerFactory } from '../helpers/logger-factory';
 import { ErrorUtterance as Utterance } from '../utterances/error-utterance';
 
